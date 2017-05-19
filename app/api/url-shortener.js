@@ -38,6 +38,15 @@ module.exports = function(app, db) {
         return num.toString().substring(0, 4);
     }
     
+    function save(obj, db) {
+        // Save object into db.
+        var sites = db.collection('sites');
+        sites.save(obj, function(err, result) {
+            if (err) throw err;
+            console.log('Saved ' + result);
+        });
+    }
+    
     function findURL(link, db, res) {
         // Check to see if the site is already there
         var sites = db.collection('sites');
