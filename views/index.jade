@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 M1Gi's URL Shortener
+    h2 User Stories:
+    ul
+        li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+        li If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+        li When I visit that shortened URL, it will redirect me to my original link.
+    h2 How to use:
+    code https://fcc-urlshortener-micros.herokuapp.com/new/http://freecodecamp.com
+    br
+    code https://fcc-urlshortener-micros.herokuapp.com/new/https://github.com
+    h2 Example Output
+    code { "original_url": "http://freecodecamp.com", "shortened_url": "https://fcc-urlshortener-micros.herokuapp.com/" }
+    br
+    h3 When you visit the shortened URL, you will automatically be redirected.
