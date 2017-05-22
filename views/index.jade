@@ -1,6 +1,9 @@
 extends layout
 
 block content
+    if err
+        div
+            h2= err
     h1 M1Gi's URL Shortener
     h2 User Stories:
     ul
@@ -8,9 +11,9 @@ block content
         li If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
         li When I visit that shortened URL, it will redirect me to my original link.
     h2 How to use:
-    code https://fcc-urlshortener-micros.herokuapp.com/new/http://freecodecamp.com
+    code https://fcc-urlshortener-micros.herokuapp.com/create/https://google.com
     br
     h2 Example Output
-    code { "original_url": "http://freecodecamp.com", "shortened_url": "https://fcc-urlshortener-micros.herokuapp.com/7688" }
+    code { "original_url": "https://google.com", "shortened_url": "https://fcc-urlshortener-micros.herokuapp.com/733" }
     br
     h3 When you visit the shortened URL, you will automatically be redirected.
